@@ -1,0 +1,95 @@
+.carro * {
+    position: relative;
+}
+
+@media screen and (max-width: 900px) {
+    .carro {
+        display: block;
+        width: 300px !important;
+        height: auto;
+    }
+    
+    .carro thead {
+        display: none;
+    }
+
+    .carro > *, .carro tr, .carro td {
+        display: block;
+    }
+
+    .carro tbody tr td {
+        padding-left: 43% !important;
+        padding-bottom: 3px;
+        padding-top: 3px;
+    }
+
+    .carro tbody tr td:last-child {
+        margin-bottom: 0px;
+    }
+
+    .carro tbody tr td:before {
+        color: #999;
+        font-weight: unset;
+        position: absolute;
+        left: 7px;
+        /* top: 10px; */
+    }
+
+    .carro tbody tr {
+        font-size: 13px;
+        margin-top: 10px;
+    }
+
+    .carro tbody tr {
+        top: 10px;
+    }
+
+    .carro tbody tr td:nth-child(1)::before{
+        content: "Código: ";
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .carro tbody tr td:nth-child(2)::before{
+        content: "Nombre: ";
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .carro tbody tr td:nth-child(3)::before{
+        content: "Concentración: ";
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .carro tbody tr td:nth-child(4)::before{
+        content: "Adicional: ";
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .carro tbody tr td:nth-child(5)::before{
+        content: "Precio: ";
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .carro tbody tr td:nth-child(6)::before{
+        content: "Eliminar: ";
+        font-weight: bold;
+        color: #000000;
+    }
+}
+
+/* CSS para el Carrito de Compras */
+.imagen-carrito {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.contador {
+    position: absolute;
+    top: 0px;
+    right: 3px;
+}
