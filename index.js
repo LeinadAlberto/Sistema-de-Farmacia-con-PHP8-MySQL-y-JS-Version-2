@@ -20,9 +20,31 @@ $(document).ready(function() {
             body: 'funcion='+funcion+'&&dni='+dni+'&&pass='+pass
         })
 
-        let response = await data.text();
+        if (data.ok) {
+                let response = await data.text();
 
-        console.log(response);
+                try {
+                    let respuesta = JSON.parse(response);
+                    console.log(respuesta);
+                } catch (error) {
+                    /* console.error(error);
+                    console.log(response); */
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error', 
+                        text: 'Hubo conflicto en el sistema, póngase en contacto con el administrador'
+                    })
+                }
+        } else {
+            /* console.error(data.status);
+            console.error(data.statusText); */
+            Swal.fire({
+                icon: 'error',
+                title: data.statusText, 
+                text: 'Hubo conflicto de código: ' + data.status
+            })
+        }
+
     }
 
 })

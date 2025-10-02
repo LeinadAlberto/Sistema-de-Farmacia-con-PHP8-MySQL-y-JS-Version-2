@@ -6,10 +6,18 @@
 
     session_start();
 
-    if ($_POST['funcion'] == 'login') {
-        $dni = $_POST['dni'];
-        $pass = $_POST['pass'];
-        echo $dni . ' ' . $pass;
+    if ($_POST["funcion"] == "login") {
+        $dni = $_POST["dni"];
+        $pass = $_POSdsadsadT["pass"];
+        /* echo $dni . ' ' . $pass; */
+        $json = array(
+            "dni" => $dni,
+            "pass" => $pass
+        );
+
+        $jsonstring = json_encode($json);
+
+        echo $jsonstring;
     }
 
     /* ********************************************************************************** */

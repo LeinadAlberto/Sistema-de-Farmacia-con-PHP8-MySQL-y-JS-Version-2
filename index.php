@@ -17,6 +17,9 @@
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/farmaciav2/Util/css/login.css"> 
+
+        <!-- Sweet Alert 2 CSS-->
+        <link rel="stylesheet" href="/farmaciav2/Util/css/sweetalert2.min.css"> 
     </head>
 
     <body>
@@ -76,10 +79,13 @@
 
     <!-- jQuery -->
     <script src="/farmaciav2/Util/js/jquery.min.js"></script>
+    <!-- Sweet Alert 2 JS-->
+    <script src="/farmaciav2/Util/js/sweetalert2.min.js"></script>
     
     <!-- Custom JS -->
     <script src="/farmaciav2/Util/js/login.js"></script>
     <script src="/farmaciav2/index.js"></script>
+
 
 </html>
 
