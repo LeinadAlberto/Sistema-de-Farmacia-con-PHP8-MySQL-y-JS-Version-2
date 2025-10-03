@@ -1,6 +1,6 @@
 <?php 
 
-    include_once "../modelo/Usuario.php";
+    include_once $_SERVER["DOCUMENT_ROOT"] . "/farmaciav2/Models/Usuario.php";
 
     $usuario = new Usuario();
 
@@ -8,19 +8,136 @@
 
     if ($_POST["funcion"] == "login") {
         $dni = $_POST["dni"];
-        $pass = $_POSdsadsadT["pass"];
+        $pass = $_POST["pass"];
+        $usuario -> login($dni);
         /* echo $dni . ' ' . $pass; */
-        $json = array(
+        /* $json = array(
             "dni" => $dni,
             "pass" => $pass
-        );
+        ); */
 
-        $jsonstring = json_encode($json);
+        /* $jsonstring = json_encode($json);
 
-        echo $jsonstring;
+        echo $jsonstring; */
     }
 
-    /* ********************************************************************************** */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    /* ****************************************************************************************************** 
+                                    FUNCIONES OBSOLETAS DE ACA PARA ABAJO
+    ****************************************************************************************************** */
     if ($_POST["funcion"] == "buscar_usuario") {
         $json = array();
         $fecha_actual = new DateTime();
