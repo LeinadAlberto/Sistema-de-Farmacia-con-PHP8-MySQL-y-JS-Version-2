@@ -2,26 +2,41 @@
 
 include_once $_SERVER["DOCUMENT_ROOT"] . "/farmaciav2/Models/Conexion.php";
 
-class Usuario {
+class Usuario 
+{
 
     var $objetos;
 
-    public function __construct() {
+    public function __construct() 
+    {
         $db = new Conexion();
-        $this -> acceso = $db -> pdo;
+        $this->acceso = $db->pdo;
     }
 
-    function login($dni) {
+    function login($dni) 
+    {
 
-        $sql = "SELECT * 
-                FROM usuario 
-                INNER JOIN tipo_us
-                ON us_tipo = id_tipo_us
-                WHERE dni_us = :dni";
+        $sql = "SELECT 
+                u.id as id, 
+                u.nombre as nombre, 
+                u.apellido as apellido, 
+                u.dni as dni,
+                u.avatar as avatar, 
+                u.id_tipo as id_tipo, 
+                t.nombre as tipo, 
+                u.contrasena as contrasena 
+                FROM usuario u
+                JOIN tipo t
+                ON u.id_tipo = t.id
+                WHERE u.dni = :dni";
+
+        $variables = array(
+            ":dni" => $dni
+        );
 
         $query = $this -> acceso -> prepare($sql);
 
-        $query -> execute(array(":dni" => $dni));
+        $query -> execute($variables);
 
         $this -> objetos = $query -> fetchAll();
 

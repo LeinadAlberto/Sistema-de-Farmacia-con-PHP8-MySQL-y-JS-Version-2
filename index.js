@@ -25,14 +25,29 @@ $(document).ready(function() {
 
                 try {
                     let respuesta = JSON.parse(response);
-                    console.log(respuesta);
+                    /* console.log(respuesta); */
+                    if (respuesta.mensaje == 'success') {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Logueado', 
+                            text: 'Inicio de sesión correcto, bienvenido.',
+                        })
+                    } else if (respuesta.mensaje == 'error') {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error', 
+                            text: 'Credenciales incorrectas',
+                        })
+
+                        $('#form-login').trigger('reset');
+                    }
                 } catch (error) {
-                    /* console.error(error);
-                    console.log(response); */
+                    console.error(error);
+                    console.log(response);
                     Swal.fire({
                         icon: 'error',
                         title: 'Error', 
-                        text: 'Hubo conflicto en el sistema, póngase en contacto con el administrador'
+                        text: 'Hubo conflicto en el sistema, póngase en contacto con el administrador',
                     })
                 }
         } else {

@@ -1,25 +1,48 @@
 <?php 
 
-    include_once $_SERVER["DOCUMENT_ROOT"] . "/farmaciav2/Models/Usuario.php";
+include_once $_SERVER["DOCUMENT_ROOT"] . "/farmaciav2/Models/Usuario.php";
 
-    $usuario = new Usuario();
+$usuario = new Usuario();
 
-    session_start();
+session_start();
 
-    if ($_POST["funcion"] == "login") {
-        $dni = $_POST["dni"];
-        $pass = $_POST["pass"];
-        $usuario -> login($dni);
-        /* echo $dni . ' ' . $pass; */
-        /* $json = array(
-            "dni" => $dni,
-            "pass" => $pass
-        ); */
+if ($_POST["funcion"] == "login") {
 
-        /* $jsonstring = json_encode($json);
+    $dni  = $_POST["dni"];
+    $pass = $_POST["pass"];
 
-        echo $jsonstring; */
+    $usuario -> login($dni);
+
+    /* var_dump($usuario -> objetos); */
+
+    $mensaje = "";
+
+    if (!empty( $usuario->objetos)) {
+        $contrasena = $usuario->objetos[0]->contrasena;
+        if ($pass == $contrasena) {
+            $_SESSION["id"] = $usuario->objetos[0]->id;
+            $_SESSION["nombre"] = $usuario->objetos[0]->nombre;
+            $_SESSION["apellido"] = $usuario->objetos[0]->apellido;
+            $_SESSION["dni"] = $usuario->objetos[0]->dni;
+            $_SESSION["avatar"] = $usuario->objetos[0]->avatar;
+            $_SESSION["id_tipo"] = $usuario->objetos[0]->id_tipo;
+            $_SESSION["tipo"] = $usuario->objetos[0]->tipo;
+            $mensaje = "success";
+        } else {
+            $mensaje = "error";
+        }
+    } else {
+        $mensaje = "error";
     }
+
+    $json = array(
+        "mensaje" => $mensaje,
+    ); 
+
+    $jsonstring = json_encode($json);
+
+    echo $jsonstring;
+}
 
 
 
