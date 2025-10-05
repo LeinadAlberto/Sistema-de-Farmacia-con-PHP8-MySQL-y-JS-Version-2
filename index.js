@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    verificar_sesion();
+
     $('#form-login').submit( (e) => {
 
         let dni = $('#dni').val();
@@ -10,7 +12,8 @@ $(document).ready(function() {
         e.preventDefault();
     })
 
-    async function login(dni, pass) {
+    async function login(dni, pass) 
+    {
 
         let funcion = 'login';
 
@@ -25,13 +28,9 @@ $(document).ready(function() {
 
                 try {
                     let respuesta = JSON.parse(response);
-                    /* console.log(respuesta); */
+                    console.log(respuesta);
                     if (respuesta.mensaje == 'success') {
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Logueado', 
-                            text: 'Inicio de sesión correcto, bienvenido.',
-                        })
+                        location.href = '/farmaciav2/Views/catalogo.php';
                     } else if (respuesta.mensaje == 'error') {
                         Swal.fire({
                             icon: 'error',
@@ -53,6 +52,45 @@ $(document).ready(function() {
         } else {
             /* console.error(data.status);
             console.error(data.statusText); */
+            Swal.fire({
+                icon: 'error',
+                title: data.statusText, 
+                text: 'Hubo conflicto de código: ' + data.status
+            })
+        }
+
+    }
+
+    async function verificar_sesion() 
+    {
+        let funcion = 'verificar_sesion';
+
+        let data = await fetch('/farmaciav2/Controllers/UsuarioController.php', {
+            method: 'POST', 
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}, 
+            body: 'funcion='+funcion,
+        })
+
+        if (data.ok) {
+                let response = await data.text();
+
+                try {
+                    let respuesta = JSON.parse(response);
+                    if (respuesta.lenght != 0) {
+                        location.href = '/farmaciav2/Views/catalogo.php';
+                    }
+                } catch (error) {
+                    console.error(error);
+                    console.log(response);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error', 
+                        text: 'Hubo conflicto en el sistema, póngase en contacto con el administrador',
+                    })
+                }
+        } else {
+            console.error(data.status);
+            console.error(data.statusText);
             Swal.fire({
                 icon: 'error',
                 title: data.statusText, 

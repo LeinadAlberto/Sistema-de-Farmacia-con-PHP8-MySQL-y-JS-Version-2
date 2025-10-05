@@ -42,6 +42,25 @@ if ($_POST["funcion"] == "login") {
     $jsonstring = json_encode($json);
 
     echo $jsonstring;
+
+} else if ($_POST["funcion"] == "verificar_sesion") {
+    if (!empty($_SESSION["id"])) {
+        $json = array(
+            "id" => $_SESSION["id"],
+            "nombre" => $_SESSION["nombre"],
+            "apellido" => $_SESSION["apellido"],
+            "dni" => $_SESSION["dni"],
+            "avatar" => $_SESSION["avatar"],
+            "id_tipo" => $_SESSION["id_tipo"],
+            "tipo" => $_SESSION["tipo"],
+        );
+    } else {
+        $json = array();
+    }
+  
+    $jsonstring = json_encode($json);
+
+    echo $jsonstring; 
 }
 
 

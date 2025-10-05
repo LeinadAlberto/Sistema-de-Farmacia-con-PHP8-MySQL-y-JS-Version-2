@@ -1,10 +1,5 @@
 <?php 
-    session_start();
-
-    /* Si Usuario es Administrador o Root */
-    if ($_SESSION["us_tipo"] == 1 || $_SESSION["us_tipo"] == 3 || $_SESSION["us_tipo"] == 2) {
-
-        include_once "layouts/header.php";
+include_once "layouts/header.php";
 ?>
 
         <title>Adm | Catálogo</title>
@@ -107,14 +102,7 @@
         </div><!-- /.content-wrapper -->
 
 <?php 
-        include_once "layouts/footer.php";
-
-    } else { // Closed if
-
-        /* Si Usuario no es Administrador o Root, se lo redirecciona al Login*/
-        header("Location: ../index.php");
-        
-    }  
+include_once "layouts/footer.php"; 
 ?>
 
 <script src="../js/Catalogo.js"></script>
