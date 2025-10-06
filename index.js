@@ -32,11 +32,7 @@ $(document).ready(function() {
                     if (respuesta.mensaje == 'success') {
                         location.href = '/farmaciav2/Views/catalogo.php';
                     } else if (respuesta.mensaje == 'error') {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Error', 
-                            text: 'Credenciales incorrectas',
-                        })
+                        toastr.error('Credenciales incorrectas!', 'Error!')
 
                         $('#form-login').trigger('reset');
                     }
@@ -76,7 +72,7 @@ $(document).ready(function() {
 
                 try {
                     let respuesta = JSON.parse(response);
-                    if (respuesta.lenght != 0) {
+                    if (respuesta.length != 0) {
                         location.href = '/farmaciav2/Views/catalogo.php';
                     }
                 } catch (error) {

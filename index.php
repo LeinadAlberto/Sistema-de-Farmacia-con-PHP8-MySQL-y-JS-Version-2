@@ -20,6 +20,9 @@
 
         <!-- Sweet Alert 2 CSS-->
         <link rel="stylesheet" href="/farmaciav2/Util/css/sweetalert2.min.css"> 
+
+        <!-- Toastr CSS-->
+        <link rel="stylesheet" href="/farmaciav2/Util/css/toastr.min.css"> 
     </head>
 
     <body>
@@ -81,7 +84,8 @@
     <script src="/farmaciav2/Util/js/jquery.min.js"></script>
     <!-- Sweet Alert 2 JS-->
     <script src="/farmaciav2/Util/js/sweetalert2.min.js"></script>
-    
+    <!-- Toastr-->
+    <script src="/farmaciav2/Util/js/toastr.min.js"></script>
     <!-- Custom JS -->
     <script src="/farmaciav2/Util/js/login.js"></script>
     <script src="/farmaciav2/index.js"></script>

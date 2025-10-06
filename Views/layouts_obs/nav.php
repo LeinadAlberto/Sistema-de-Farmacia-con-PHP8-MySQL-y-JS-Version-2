@@ -82,7 +82,7 @@
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
                 <!-- Messages Dropdown Menu -->
-                <a href="../controlador/Logout.php">Cerrar Sesión</a>
+                <a href="../Controllers/Logout.php">Cerrar Sesión</a>
             </ul>
         </nav><!-- /.navbar -->
 

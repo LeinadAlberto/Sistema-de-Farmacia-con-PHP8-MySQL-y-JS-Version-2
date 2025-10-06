@@ -1,6 +1,246 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        
+<html lang="es" style="height: auto;">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="#" type="image/x-icon">
+		<title>AdminLTE 3 | Blank Page</title>
+
+		<!-- Google Font: Source Sans Pro -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="/farmaciav2/Util/css/css/all.min.css">
+		<!-- Theme Style -->
+		<link rel="stylesheet" href="/farmaciav2/Util/css/adminlte.min.css">
+	</head>
+
+	<body class="sidebar-mini layout-navbar-fixed layout-fixed layout-footer-fixed accent-lightblue" style="height: auto;">
+		<!-- Site wrapper -->
+		<div class="wrapper">
+			<!-- Navbar -->
+			<nav class="main-header navbar navbar-expand navbar-light bg-lightblue">
+				<!-- Left navbar links -->
+				<ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a href="../../index3.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+				</ul>
+
+				<!-- Right navbar links -->
+				<ul class="navbar-nav ml-auto">
+                    <!-- Messages Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-comments"></i>
+                        <span class="badge badge-danger navbar-badge">3</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <a href="#" class="dropdown-item">
+                            <!-- Message Start -->
+                            <div class="media">
+                            <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                            <div class="media-body">
+                                <h3 class="dropdown-item-title">
+                                Brad Diesel
+                                <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                                </h3>
+                                <p class="text-sm">Call me whenever you can...</p>
+                                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                            </div>
+                            </div>
+                            <!-- Message End -->
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <!-- Message Start -->
+                            <div class="media">
+                            <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                            <div class="media-body">
+                                <h3 class="dropdown-item-title">
+                                John Pierce
+                                <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                                </h3>
+                                <p class="text-sm">I got your message bro</p>
+                                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                            </div>
+                            </div>
+                            <!-- Message End -->
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <!-- Message Start -->
+                            <div class="media">
+                            <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                            <div class="media-body">
+                                <h3 class="dropdown-item-title">
+                                Nora Silvester
+                                <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                                </h3>
+                                <p class="text-sm">The subject goes here</p>
+                                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                            </div>
+                            </div>
+                            <!-- Message End -->
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+                        </div>
+                    </li>
+                    <!-- Notifications Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" data-toggle="dropdown" href="#">
+                            <i class="far fa-bell"></i>
+                            <span class="badge badge-warning navbar-badge">15</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                            <span class="dropdown-item dropdown-header">15 Notifications</span>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-envelope mr-2"></i> 4 new messages
+                                <span class="float-right text-muted text-sm">3 mins</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-users mr-2"></i> 8 friend requests
+                                <span class="float-right text-muted text-sm">12 hours</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-file mr-2"></i> 3 new reports
+                                <span class="float-right text-muted text-sm">2 days</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" data-toggle="dropdown" href="#">
+                            <img src="/farmaciav2/Util/img/logo.png" alt="" width="30" height="30">
+                            <span>User Name</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="/farmaciav2/Controllers/Logout.php">
+                                    <i class="fas fa-user-times mr-2"></i>
+                                    Cerrar Sesión
+                                </a>
+                            </li>
+                        </ul>
+                        
+                    </li>
+				</ul>
+			</nav><!-- /.navbar -->
+
+			<!-- Main Sidebar Container -->
+			<aside class="main-sidebar elevation-4 sidebar-light-lightblue">
+				<!-- Brand Logo -->
+				<a href="../../index3.html" class="brand-link bg-lightblue">
+				    <img src="/farmaciav2/Util/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+				    <span class="brand-text font-weight-light">SIS. Farmacia</span>
+				</a>
+
+				<!-- Sidebar -->
+				<div class="sidebar os-theme-dark" style="overflow-y: auto;">
+                    <!-- Sidebar user (optional) -->
+                    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                        <div class="image">
+                        <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                        </div>
+                        <div class="info">
+                        <a href="#" class="d-block">Alexander Pierce</a>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Menu -->
+                    <nav class="mt-2">
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                            <li class="nav-header">Usuario</li>
+
+                            <!-- Datos personales -->
+                            <li class="nav-item">
+                                <a href="editar_datos_personales.php" class="nav-link">
+                                    <i class="nav-icon fas fa-user-cog"></i>
+                                    <p>
+                                        Datos personales
+                                    </p>
+                                </a>
+                            </li>
+
+                            <!-- Gestión Usuario -->
+                            <li id="gestion_usuario" class="nav-item">
+                                <a href="adm_usuario.php" class="nav-link">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>
+                                        Gestión Usuario
+                                    </p>
+                                </a>
+                            </li>
+
+                            <li class="nav-header">Ventas</li>
+                            
+                            <!-- Listar Ventas -->
+                            <li class="nav-item">
+                                <a href="adm_venta.php" class="nav-link">
+                                    <i class="nav-icon fas fa-notes-medical"></i>
+                                    <p>
+                                        Listar Ventas
+                                    </p>
+                                </a>
+                            </li>
+
+                            <li id="almacen" class="nav-header">Almacén</li>
+                            
+                            <!-- Gestión Producto -->
+                            <li id="gestion_producto" class="nav-item">
+                                <a href="adm_producto.php" class="nav-link">
+                                    <i class="nav-icon fas fa-pills"></i>
+                                    <p>
+                                        Gestión Producto
+                                    </p>
+                                </a>
+                            </li>
+
+                            <!-- Gestión Atributo -->
+                            <li id="gestion_atributo" class="nav-item">
+                                <a href="adm_atributo.php" class="nav-link">
+                                    <i class="nav-icon fas fa-vials"></i>
+                                    <p>
+                                        Gestión Atributo
+                                    </p>
+                                </a>
+                            </li>
+
+                            <!-- Gestión Lote -->
+                            <li id="gestion_lote" class="nav-item">
+                                <a href="adm_lote.php" class="nav-link">
+                                    <i class="nav-icon fas fa-cubes"></i>
+                                    <p>
+                                        Gestión Lote
+                                    </p>
+                                </a>
+                            </li>
+
+                            <li id="compras" class="nav-header">Compras</li>
+
+                            <!-- Gestión Proveedor -->
+                            <li id="gestion_proveedor" class="nav-item">
+                                <a href="adm_proveedor.php" class="nav-link">
+                                    <i class="nav-icon fas fa-truck"></i>
+                                    <p>
+                                        Gestión Proveedor
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav><!-- /.sidebar-menu -->
+				</div><!-- /.sidebar -->
+			</aside>
